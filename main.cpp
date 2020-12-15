@@ -45,6 +45,18 @@ public:
 
 class HungarianAlgo {
 public:
+
+    HungarianAlgo() {}
+
+    HungarianAlgo(Number _matrix [N][N]) {
+        for (int row = 0; row < N; ++row) {
+            for (int col = 0; col < N; ++col) {
+                matrix[row][col] = _matrix[row][col];
+                originalMatrix[row][col] = _matrix[row][col];
+            }
+        }
+    }
+
     int solve() {
         // Subtract row
         for (int row = 0; row < N; row++) {
@@ -98,20 +110,20 @@ public:
 private:
     int result = 0;
     Number matrix[N][N] = {
-            { Number(7), Number(3), Number(6), Number(9), Number(5) },
-            { Number(7), Number(5), Number(7), Number(5), Number(6) },
-            { Number(7), Number(6), Number(8), Number(8), Number(9) },
-            { Number(3), Number(1), Number(6), Number(5), Number(7) },
-            { Number(2), Number(4), Number(9), Number(9), Number(5) }
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) }
     };
 
     Number originalMatrix[N][N] = {
-            { Number(7), Number(3), Number(6), Number(9), Number(5) },
-            { Number(7), Number(5), Number(7), Number(5), Number(6) },
-            { Number(7), Number(6), Number(8), Number(8), Number(9) },
-            { Number(3), Number(1), Number(6), Number(5), Number(7) },
-            { Number(2), Number(4), Number(9), Number(9), Number(5) }
-    };
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) },
+            { Number(0), Number(0), Number(0), Number(0), Number(0) }
+            };
 
     void crossOutMatrix() {
         for (int row = 0; row < N; ++row) {
@@ -297,7 +309,14 @@ private:
 };
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    HungarianAlgo app = HungarianAlgo();
+    Number matrix [N][N] = {
+            { Number(7), Number(3), Number(6), Number(9), Number(5) },
+            { Number(7), Number(5), Number(7), Number(5), Number(6) },
+            { Number(7), Number(6), Number(8), Number(8), Number(9) },
+            { Number(3), Number(1), Number(6), Number(5), Number(7) },
+            { Number(2), Number(4), Number(9), Number(9), Number(5) }
+    };
+    HungarianAlgo app = HungarianAlgo(matrix);
 
     int res = app.solve();
 
