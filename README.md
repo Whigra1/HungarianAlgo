@@ -10,3 +10,21 @@ Algorithm was implemented in C++. To implement this algorithm I use 2 class firs
 To solve this algorithm you can simply create HungarianAlgo object and pass matrix with Number object in a contructor
 ![Test Image 1](images/image.png)
 
+Step of algorithm executions: 
+
+1) Subtract every row by it max element and multiply all row by -1
+
+2) Try to find zeros in every row if success finish algo
+
+3) Subtract every col by it min element
+
+4) Try to find zeros in every row if success finish algo
+
+5) Crossout rows and cols with zeros
+
+6) Try to find zeros in every row if success finish algo
+
+7) Repeat until not find result
+
+![Test Image 2](images/image5.png)
+
