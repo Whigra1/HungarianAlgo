@@ -26,5 +26,5 @@ Step of algorithm executions:
 
 7) Repeat until not find result
 
-![Test Image 2](images/image5.png)
+![Test Image 2](images/imageMain.png)
 
